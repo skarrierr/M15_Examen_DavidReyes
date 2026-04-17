@@ -142,7 +142,21 @@ public class ObjectPicker : MonoBehaviour
     }
     void HandlePickingUI()
     {
-
+        switch (state)
+        {
+            case PICKSTATE.AVAILABLE:
+                pickingIcon.alpha = pickingIconAvailable;
+                break;
+                case PICKSTATE.BLOCKED:
+                pickingIcon.alpha = pickingIconBlocked;
+                break;
+            case PICKSTATE.FAR:
+                pickingIcon.alpha = pickingIconFar;
+                break; 
+                case PICKSTATE.NOTVISIBLE:
+                pickingIcon.alpha = 0; break;
+                
+        }
     }
 
     void StartPickup()

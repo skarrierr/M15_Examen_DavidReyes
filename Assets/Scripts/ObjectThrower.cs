@@ -45,7 +45,7 @@ public class ObjectThrower : MonoBehaviour
             GameObject temp = Instantiate(objects[selected].obj, transform.position + transform.forward * distance, transform.rotation);
             temp.GetComponent<Rigidbody>().AddForce(transform.forward * force, ForceMode.VelocityChange);
             force = forceMin;
-            forceIndicator.fillAmount = 0;  
+            forceIndicator.fillAmount = 0;
         }
         else
         {
